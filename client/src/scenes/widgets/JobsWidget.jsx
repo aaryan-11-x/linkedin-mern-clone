@@ -9,7 +9,7 @@ const JobsWidget = ({ userId, isProfile = false }) => {
   const token = useSelector((state) => state.token);
 
   const getJobs = async () => {
-    const response = await fetch("http://localhost:3001/jobs", {
+    const response = await fetch("https://linkedin-clone-server.vercel.app/jobs", {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -19,7 +19,7 @@ const JobsWidget = ({ userId, isProfile = false }) => {
 
   const getUserJobs = async () => {
     const response = await fetch(
-      `http://localhost:3001/jobs/${userId}/jobs`,
+      `https://linkedin-clone-server.vercel.app/jobs/${userId}/jobs`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
