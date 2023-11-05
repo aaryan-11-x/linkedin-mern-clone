@@ -27,7 +27,7 @@ const Connection = ({ connectionId, name, subtitle, userPicturePath }) => {
       return;
     }
     const response = await fetch(
-      `http://localhost:3001/users/${_id}/${connectionId}`,
+      `https://linkedin-clone-server.vercel.app/users/${_id}/${connectionId}`,
       {
         method: "PATCH",
         headers: {
