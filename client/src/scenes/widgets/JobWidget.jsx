@@ -35,7 +35,7 @@ import {
     const primary = palette.primary.main;
   
     const patchLike = async () => {
-      const response = await fetch(`http://localhost:3001/jobs/${jobId}/like`, {
+      const response = await fetch(`https://linkedin-clone-server.vercel.app/jobs/${jobId}/like`, {
         method: "PATCH",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -65,7 +65,7 @@ import {
             alt="job"
             align="center"
             style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-            src={`http://localhost:3001/assets/${picturePath}`}
+            src={`https://linkedin-clone-server.vercel.app/assets/${picturePath}`}
           />
         )}
         <FlexBetween mt="0.25rem">
