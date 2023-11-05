@@ -13,7 +13,7 @@ const ConnectionListWidget = ({ userId }) => {
 
   const getConnections = async () => {
     const response = await fetch(
-      `http://localhost:3001/users/${userId}/connections`,
+      `https://linkedin-clone-server.vercel.app/users/${userId}/connections`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
