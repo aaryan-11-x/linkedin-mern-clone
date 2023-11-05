@@ -80,7 +80,8 @@ const Form = () => {
       "https://linkedin-clone-server.vercel.app/auth/register",
       {
         method: "POST",
-        body: formData,
+        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" },
       }
     );
     const savedUser = await savedUserResponse.json();
